@@ -78,8 +78,12 @@ def releases():
                        f"/releases?per_page=5"):
             if rel["draft"] or not rel.get("published_at"):
                 continue
-            out.append((rel["published_at"], repo["name"],
-                        rel["tag_name"], rel["html_url"]))
+            # Sort on created_at, not published_at: for a release cut later
+            # from an older tag, published_at is when the release object was
+            # made, while created_at stays the real tag date. They are
+            # identical for releases cut at ship time.
+            out.append((rel.get("created_at") or rel["published_at"],
+                        repo["name"], rel["tag_name"], rel["html_url"]))
     out.sort(reverse=True)
     if not out:
         return ""
