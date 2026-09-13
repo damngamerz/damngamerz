@@ -1,8 +1,14 @@
+# Hi, I'm Saurav 👋
+
 Software engineer in Darmstadt, Germany. Day job at
 [gastromatic](https://gastromatic.de).
 
 Most of my work happens through coding agents now, mainly [pi](https://pi.dev)
-and Claude Code. The tooling I end up building around them lands here.
+and Claude Code. The tooling I end up building around them lands here. On the
+side I'm building something with two friends — more on that when there's
+something to show.
+
+Outside that: the gym, and a D&D campaign that was supposed to be a one-shot.
 
 ## Building
 
@@ -81,4 +87,6 @@ An archive for now — nothing new since 2017.
 
 ## Contact
 
-[X](https://x.com/damngamerz)
+Say hi on [X](https://x.com/damngamerz) — I'm easiest to reach there.
+
+EuroPython four years running, FOSDEM the last two. Find me at either.
