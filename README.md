@@ -4,9 +4,9 @@ Software engineer in Darmstadt, Germany. Day job at
 [gastromatic](https://gastromatic.de).
 
 Most of my work happens through coding agents now, mainly [pi](https://pi.dev)
-and Claude Code. The tooling I end up building around them lands here. On the
-side I'm building something with two friends — more on that when there's
-something to show.
+and Claude Code. The tooling I end up building around them lands here. I'm
+also building something on the side — more on that when there's something to
+show.
 
 Outside that: the gym, and a D&D campaign that was supposed to be a one-shot.
 
