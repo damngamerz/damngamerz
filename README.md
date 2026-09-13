@@ -1,9 +1,8 @@
 Software engineer in Darmstadt, Germany. Day job at
 [gastromatic](https://gastromatic.de).
 
-Most of my work happens through coding agents now — [pi](https://pi.dev) and
-Claude Code, models routed through Requesty. The tooling I end up building
-around them lands here.
+Most of my work happens through coding agents now, mainly [pi](https://pi.dev)
+and Claude Code. The tooling I end up building around them lands here.
 
 ## Building
 
