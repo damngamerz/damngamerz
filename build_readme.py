@@ -169,10 +169,11 @@ def posts():
     if not items:
         return ""
     items.sort(reverse=True)
-    # A feed whose newest entry is years old is not a writing habit. Render
-    # nothing until there is something current to point at.
+    # A feed whose newest entry is years old is not a writing habit. Say so
+    # plainly rather than listing stale posts as if they were current — and
+    # compute the year, so the line retires itself once something new lands.
     if datetime.now(timezone.utc) - items[0][0] > POST_STALE_AFTER:
-        return ""
+        return f"An archive for now — nothing new since {items[0][0]:%Y}."
     return "\n".join(f"- [{title}]({link}) — {when:%Y-%m-%d}"
                      for when, title, link in items[:MAX_POSTS])
 

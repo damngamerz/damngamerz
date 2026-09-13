@@ -1,11 +1,18 @@
-Software engineer in Darmstadt, Germany. I work at [gastromatic](https://gastromatic.de)
-and build daily with coding agents — mostly [pi](https://pi.dev) and Claude Code.
+Software engineer in Darmstadt, Germany. Day job at
+[gastromatic](https://gastromatic.de).
+
+Most of my work happens through coding agents now — [pi](https://pi.dev) and
+Claude Code, models routed through Requesty. The tooling I end up building
+around them lands here.
 
 ## Building
 
-**[pi-otel](https://github.com/damngamerz/pi-otel)** — privacy-first OpenTelemetry
-traces, metrics and optional LLM evaluation for the Pi coding agent. Baseline
-telemetry carries no prompts, responses, tool arguments, paths or shell commands.
+**[pi-otel](https://github.com/damngamerz/pi-otel)** — OpenTelemetry for the Pi
+coding agent, without the privacy tax.
+
+Agent telemetry usually means handing over your prompts, file paths and shell
+commands along with the metrics. This one doesn't. Baseline traces carry none of
+it, and the LLM evaluation that would is off until you turn it on.
 
 ```
 pi install npm:@damngamerz/pi-otel
@@ -18,9 +25,10 @@ pi install npm:@damngamerz/pi-otel
 <!-- dl:@damngamerz/pi-otel ends -->
 
 **[pi-agentarium](https://github.com/damngamerz/pi-agentarium)** — ambient
-multi-agent observability for Pi. Agent activity renders as a small terminal
-habitat: each running session becomes a plant, fish or star, and the meadow
-reacts as agents think, call tools and finish turns.
+multi-agent observability for Pi, which is a straight-faced way of saying it
+turns agent activity into a terminal garden. Every running session becomes a
+plant, a fish or a star. The meadow reacts as agents think, call tools and
+finish turns. It is a real dashboard; it just doesn't look like one.
 
 ```
 pi install npm:pi-agentarium
@@ -43,8 +51,10 @@ pi install npm:pi-agentarium
 
 ## Open source
 
-Google Summer of Code 2017 with coala, on documentation extraction. Since then,
-smaller fixes upstream wherever something broke in my own work.
+Google Summer of Code 2017 with coala, building the documentation extraction
+API. Everything after that is smaller: fixes filed upstream whenever something
+broke in whatever I happened to be using. The counts below are generated, so
+they are whatever they actually are.
 
 <!-- oss starts -->
 
@@ -65,6 +75,9 @@ Single merged PRs to [coala/devops](https://github.com/coala/devops/pull/5) · [
 [saurav.eu](https://saurav.eu) · [RSS](https://saurav.eu/feed.xml)
 
 <!-- posts starts -->
+
+An archive for now — nothing new since 2017.
+
 <!-- posts ends -->
 
 ## Contact
