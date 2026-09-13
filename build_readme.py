@@ -25,8 +25,11 @@ USER = "damngamerz"
 BLOG_FEED = "https://saurav.eu/feed.xml"
 README = os.path.join(os.path.dirname(os.path.abspath(__file__)), "README.md")
 
+# Projects shown in the releases block — one line each, newest release only.
 MAX_RELEASES = 5
 MAX_POSTS = 3
+# Shown in place of the post list while the feed is stale.
+ARCHIVE_NOTE = "Archive from my coala and GSoC years."
 # npm packages to report download counts for, each rendered into its own
 # `<!-- dl:<name> -->` block so the surrounding prose stays hand-written.
 PACKAGES = ["@damngamerz/pi-otel", "pi-agentarium"]
@@ -87,9 +90,17 @@ def releases():
     out.sort(reverse=True)
     if not out:
         return ""
-    lines = ["**Recent releases**", ""]
-    for published, name, tag, url in out[:MAX_RELEASES]:
-        lines.append(f"- [{name} {tag}]({url}) — {published[:10]}")
+    # One line per project, not a global top-N. A run of patch bumps from the
+    # same package is filler, and it buries every other project behind the one
+    # that ships most often.
+    latest = {}
+    for created, name, tag, url in out:
+        latest.setdefault(name, (created, tag, url))
+    newest_first = sorted(latest.items(), key=lambda kv: kv[1][0], reverse=True)
+
+    lines = ["**Latest releases**", ""]
+    for name, (created, tag, url) in newest_first[:MAX_RELEASES]:
+        lines.append(f"- [{name} {tag}]({url}) — {created[:10]}")
     return "\n".join(lines)
 
 
@@ -169,11 +180,12 @@ def posts():
     if not items:
         return ""
     items.sort(reverse=True)
-    # A feed whose newest entry is years old is not a writing habit. Say so
-    # plainly rather than listing stale posts as if they were current — and
-    # compute the year, so the line retires itself once something new lands.
+    # A feed whose newest entry is years old is not a writing habit. Describe
+    # what is there rather than what is missing: "nothing new since 2017" is
+    # accurate but tells people not to click. Replaced by real titles, and so
+    # retired, the moment something current is published.
     if datetime.now(timezone.utc) - items[0][0] > POST_STALE_AFTER:
-        return f"An archive for now — nothing new since {items[0][0]:%Y}."
+        return ARCHIVE_NOTE
     return "\n".join(f"- [{title}]({link}) — {when:%Y-%m-%d}"
                      for when, title, link in items[:MAX_POSTS])
 

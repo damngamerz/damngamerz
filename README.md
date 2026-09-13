@@ -43,13 +43,10 @@ pi install npm:pi-agentarium
 
 <!-- releases starts -->
 
-**Recent releases**
+**Latest releases**
 
 - [pi-otel v0.1.6](https://github.com/damngamerz/pi-otel/releases/tag/v0.1.6) — 2026-09-04
-- [pi-otel v0.1.5](https://github.com/damngamerz/pi-otel/releases/tag/v0.1.5) — 2026-08-27
-- [pi-otel v0.1.4](https://github.com/damngamerz/pi-otel/releases/tag/v0.1.4) — 2026-08-18
-- [pi-otel v0.1.3](https://github.com/damngamerz/pi-otel/releases/tag/v0.1.3) — 2026-08-05
-- [pi-otel v0.1.2](https://github.com/damngamerz/pi-otel/releases/tag/v0.1.2) — 2026-07-22
+- [pi-agentarium v0.1.5](https://github.com/damngamerz/pi-agentarium/releases/tag/v0.1.5) — 2026-04-26
 
 <!-- releases ends -->
 
@@ -79,7 +76,7 @@ Single merged PRs to [coala/devops](https://github.com/coala/devops/pull/5) · [
 
 <!-- posts starts -->
 
-An archive for now — nothing new since 2017.
+Archive from my coala and GSoC years.
 
 <!-- posts ends -->
 
