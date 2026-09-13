@@ -13,7 +13,7 @@ Outside that: the gym, and a D&D campaign that was supposed to be a one-shot.
 ## Building
 
 **[pi-otel](https://github.com/damngamerz/pi-otel)** — OpenTelemetry for the Pi
-coding agent, without the privacy tax.
+coding agent.
 
 Agent telemetry usually means handing over your prompts, file paths and shell
 commands along with the metrics. This one doesn't. Baseline traces carry none of
@@ -32,8 +32,7 @@ pi install npm:@damngamerz/pi-otel
 **[pi-agentarium](https://github.com/damngamerz/pi-agentarium)** — ambient
 multi-agent observability for Pi, which is a straight-faced way of saying it
 turns agent activity into a terminal garden. Every running session becomes a
-plant, a fish or a star. The meadow reacts as agents think, call tools and
-finish turns. It is a real dashboard; it just doesn't look like one.
+plant, a fish or a star. It is a real dashboard; it just doesn't look like one.
 
 ```
 pi install npm:pi-agentarium
@@ -58,8 +57,7 @@ pi install npm:pi-agentarium
 
 Google Summer of Code 2017 with coala, building the documentation extraction
 API. Everything after that is smaller: fixes filed upstream whenever something
-broke in whatever I happened to be using. The counts below are generated, so
-they are whatever they actually are.
+broke in whatever I happened to be using.
 
 <!-- oss starts -->
 
