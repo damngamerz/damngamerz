@@ -5,6 +5,7 @@ Sources, all strictly public:
   releases  GitHub Releases across repos owned by USER
   oss       merged PRs into repos USER does not own, via `is:public` search
   posts     the RSS feed at BLOG_FEED
+  dl:<pkg>  last-30-day npm download counts, one block per package
 
 Nothing here can read a private repo: the search query is pinned to
 `is:public`, and the release scan skips forks and archived repos.
@@ -15,6 +16,7 @@ import os
 import re
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -25,6 +27,12 @@ README = os.path.join(os.path.dirname(os.path.abspath(__file__)), "README.md")
 
 MAX_RELEASES = 5
 MAX_POSTS = 3
+# npm packages to report download counts for, each rendered into its own
+# `<!-- dl:<name> -->` block so the surrounding prose stays hand-written.
+PACKAGES = ["@damngamerz/pi-otel", "pi-agentarium"]
+# Below this, render nothing rather than publish a weak number. A package
+# crossing the floor starts showing its count on its own.
+MIN_DOWNLOADS = 100
 # Hide the posts block entirely while the newest post is older than this.
 POST_STALE_AFTER = timedelta(days=365)
 # Repos below this PR count collapse into a single trailing line...
@@ -165,6 +173,26 @@ def posts():
                      for when, title, link in items[:MAX_POSTS])
 
 
+def downloads(package):
+    """Last-30-day npm downloads, rounded. Empty below MIN_DOWNLOADS."""
+    quoted = urllib.parse.quote(package, safe="")
+    req = urllib.request.Request(
+        f"https://api.npmjs.org/downloads/point/last-month/{quoted}",
+        headers={"User-Agent": f"{USER}-readme-bot"})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            count = json.load(r).get("downloads", 0)
+    except urllib.error.HTTPError as exc:
+        # An unpublished or renamed package 404s; that is not a build failure.
+        if exc.code == 404:
+            return ""
+        raise
+    if count < MIN_DOWNLOADS:
+        return ""
+    # Round off the false precision — this is a signal, not a metric.
+    return f"~{round(count, -1):,} downloads in the last 30 days."
+
+
 def splice(text, name, body):
     start, end = f"<!-- {name} starts -->", f"<!-- {name} ends -->"
     pattern = re.compile(f"{re.escape(start)}.*?{re.escape(end)}", re.S)
@@ -177,6 +205,8 @@ def splice(text, name, body):
 def main():
     try:
         blocks = {"releases": releases(), "oss": open_source(), "posts": posts()}
+        for package in PACKAGES:
+            blocks[f"dl:{package}"] = downloads(package)
     except (urllib.error.URLError, urllib.error.HTTPError, ET.ParseError) as exc:
         # Leave README.md untouched rather than blanking a section on a blip.
         print(f"refresh failed, README left as-is: {exc}", file=sys.stderr)

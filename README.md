@@ -11,6 +11,24 @@ telemetry carries no prompts, responses, tool arguments, paths or shell commands
 pi install npm:@damngamerz/pi-otel
 ```
 
+<!-- dl:@damngamerz/pi-otel starts -->
+
+~730 downloads in the last 30 days.
+
+<!-- dl:@damngamerz/pi-otel ends -->
+
+**[pi-agentarium](https://github.com/damngamerz/pi-agentarium)** — ambient
+multi-agent observability for Pi. Agent activity renders as a small terminal
+habitat: each running session becomes a plant, fish or star, and the meadow
+reacts as agents think, call tools and finish turns.
+
+```
+pi install npm:pi-agentarium
+```
+
+<!-- dl:pi-agentarium starts -->
+<!-- dl:pi-agentarium ends -->
+
 <!-- releases starts -->
 
 **Recent releases**
@@ -44,7 +62,7 @@ Single merged PRs to [coala/devops](https://github.com/coala/devops/pull/5) · [
 
 ## Writing
 
-[saurav.eu](https://saurav.eu)
+[saurav.eu](https://saurav.eu) · [RSS](https://saurav.eu/feed.xml)
 
 <!-- posts starts -->
 <!-- posts ends -->
