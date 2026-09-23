@@ -25,7 +25,7 @@ pi install npm:@damngamerz/pi-otel
 
 <!-- dl:@damngamerz/pi-otel starts -->
 
-~560 downloads in the last 30 days.
+~570 downloads in the last 30 days.
 
 <!-- dl:@damngamerz/pi-otel ends -->
 
