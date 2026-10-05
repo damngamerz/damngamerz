@@ -25,7 +25,7 @@ pi install npm:@damngamerz/pi-otel
 
 <!-- dl:@damngamerz/pi-otel starts -->
 
-~490 downloads in the last 30 days.
+~360 downloads in the last 30 days.
 
 <!-- dl:@damngamerz/pi-otel ends -->
 
@@ -45,7 +45,7 @@ pi install npm:pi-agentarium
 
 **Latest releases**
 
-- [pi-otel v0.1.7](https://github.com/damngamerz/pi-otel/releases/tag/v0.1.7) — 2026-09-17
+- [pi-otel v0.1.8](https://github.com/damngamerz/pi-otel/releases/tag/v0.1.8) — 2026-10-05
 - [pi-agentarium v0.1.5](https://github.com/damngamerz/pi-agentarium/releases/tag/v0.1.5) — 2026-04-26
 
 <!-- releases ends -->
