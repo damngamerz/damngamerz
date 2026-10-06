@@ -45,7 +45,7 @@ pi install npm:pi-agentarium
 
 **Latest releases**
 
-- [pi-otel v0.1.8](https://github.com/damngamerz/pi-otel/releases/tag/v0.1.8) — 2026-10-05
+- [pi-otel v0.2.2](https://github.com/damngamerz/pi-otel/releases/tag/v0.2.2) — 2026-10-06
 - [pi-agentarium v0.1.5](https://github.com/damngamerz/pi-agentarium/releases/tag/v0.1.5) — 2026-04-26
 
 <!-- releases ends -->
