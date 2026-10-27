@@ -24,9 +24,6 @@ pi install npm:@damngamerz/pi-otel
 ```
 
 <!-- dl:@damngamerz/pi-otel starts -->
-
-~630 downloads in the last 30 days.
-
 <!-- dl:@damngamerz/pi-otel ends -->
 
 **[pi-agentarium](https://github.com/damngamerz/pi-agentarium)** — ambient
@@ -66,7 +63,7 @@ broke in whatever I happened to be using.
 - **[gastromatic/sqlstate](https://github.com/gastromatic/sqlstate)** — 2 merged PRs
 - **[python/cpython](https://github.com/python/cpython)** — 1 merged PR ([#136774](https://github.com/python/cpython/pull/136774))
 
-Single merged PRs to [coala/devops](https://github.com/coala/devops/pull/5) · [sourcecode911/i18n-nationality](https://github.com/sourcecode911/i18n-nationality/pull/43).
+Single merged PRs to [coala/devops](https://github.com/coala/devops/pull/5) · [requestyai/pi-requesty](https://github.com/requestyai/pi-requesty/pull/9) · [sourcecode911/i18n-nationality](https://github.com/sourcecode911/i18n-nationality/pull/43).
 
 <!-- oss ends -->
 
