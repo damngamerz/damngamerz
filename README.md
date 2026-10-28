@@ -24,6 +24,9 @@ pi install npm:@damngamerz/pi-otel
 ```
 
 <!-- dl:@damngamerz/pi-otel starts -->
+
+~660 downloads in the last 30 days.
+
 <!-- dl:@damngamerz/pi-otel ends -->
 
 **[pi-agentarium](https://github.com/damngamerz/pi-agentarium)** — ambient
